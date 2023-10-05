@@ -15,6 +15,8 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SignInWithGoogle from './SignInWithGoogle';
 
+
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -44,9 +46,35 @@ export default function SignInSide() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Grid container component="main" sx={{ height: '100vh', justifyContent: 'center', alignItems: 'center' }}>
+  {/* <Grid  component="main" sx={{Height: '100vh', justifyContent: 'center', alignItems: 'center' }}> */}
+  <Grid item component="main" sx={{ height: 'auto',margin: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+
         <CssBaseline />
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+   
+       <Box
+        sx={{
+          display: 'flex',
+          gap:10,
+          m: 1,
+          p: 1,
+          bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
+          color: (theme) =>
+            theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
+          border: '1px solid',
+          borderColor: (theme) =>
+            theme.palette.mode === 'dark' ? 'grey.800' : 'grey.300',
+          borderRadius: 2,
+          fontSize: '0.875rem',
+          fontWeight: '700',
+        }}
+      >
+     
+      
+       <Typography variant="h2" color="initial"
+       sx={{mt:10, ml:3}}
+       > CallHippo</Typography>
+     
           <Box
             sx={{
               my: 8,
@@ -59,6 +87,7 @@ export default function SignInSide() {
             <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
               <LockOutlinedIcon />
             </Avatar>
+      
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
@@ -107,6 +136,8 @@ export default function SignInSide() {
             
             </form>
           </Box>
+          </Box>
+     
         </Grid>
       </Grid>
     </ThemeProvider>
