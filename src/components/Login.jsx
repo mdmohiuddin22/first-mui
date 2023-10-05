@@ -17,6 +17,11 @@ import SignInWithGoogle from './SignInWithGoogle';
 
 
 
+
+
+
+
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -70,11 +75,40 @@ export default function SignInSide() {
         }}
       >
      
-      
-       <Typography variant="h2" color="initial"
-       sx={{mt:10, ml:3}}
-       > CallHippo</Typography>
-     
+     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop:'70px' }}>
+  <img
+    src="https://d1x9dsge91xf6g.cloudfront.net/webapp/images/chlogo.svg"
+    alt=""
+    style={{ width: '200px', height: '50px', marginTop: '10px' }}
+  />
+  
+  <img
+    src="https://d1x9dsge91xf6g.cloudfront.net/webapp/images/hippofact.png"
+    alt=""
+    style={{ width: '50px', height: '50px', borderRadius: '10%', marginTop: '10px', marginLeft:'150px'}}
+  />
+
+  <Typography variant="h6" color="initial" style={{ marginTop: '10px' }}>
+    Human noses and ears keep getting bigger, <br /> even when the rest of the body’s <br /> growth has come to a halt.
+  </Typography>
+  <Typography variant="h6" color="initial" style={{ marginTop: '10px' }}>WHAT'S NEW</Typography>
+  <Typography variant="h5" color="initial" style={{ marginTop: '10px' }}>Find latest updates here !</Typography>
+
+  <Typography variant="h6" color="initial" style={{ marginTop: '10px' }}>
+Now check added displays on <br /> the status page along with other <br /> technical upgrade and keep track of your calling schedule with CallHippo’s latest updates. 
+<br />Read More</Typography>
+
+<Typography variant="h5" color="initial">AVAILABLE ON</Typography>
+<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop:'10px' }}>
+<img src="https://d1x9dsge91xf6g.cloudfront.net/webapp/images/icon/ch/googleplay.png" alt="" 
+style={{ width: '150px', borderRadius: '10%', marginTop: '10px',marginRight:'10px' }}/>
+<img src="https://d1x9dsge91xf6g.cloudfront.net/webapp/images/icon/ch/iosappstore.svg" alt="" 
+style={{ width: '140px', borderRadius: '10%', marginTop: '10px', }}
+/>
+</div>
+</div>
+
+    
           <Box
             sx={{
               my: 8,
