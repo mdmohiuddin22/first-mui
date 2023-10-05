@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -12,7 +13,6 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import GoogleIcon from '@mui/icons-material/Google';
 import SignInWithGoogle from './SignInWithGoogle';
 
 function Copyright(props) {
@@ -20,10 +20,10 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        My first MUI
       </Link>{' '}
       {new Date().getFullYear()}
-      {'.'}
+      {'2023'}
     </Typography>
   );
 }
@@ -44,22 +44,8 @@ export default function SignInSide() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Grid container component="main" sx={{ height: '100vh' }}>
+      <Grid container component="main" sx={{ height: '100vh', justifyContent: 'center', alignItems: 'center' }}>
         <CssBaseline />
-        <Grid
-          item
-          xs={false}
-          sm={4}
-          md={7}
-          sx={{
-            backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
-            backgroundRepeat: 'no-repeat',
-            backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
@@ -76,7 +62,7 @@ export default function SignInSide() {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <form onSubmit={handleSubmit} sx={{mt:1}}>
               <TextField
                 margin="normal"
                 required
@@ -109,32 +95,17 @@ export default function SignInSide() {
               >
                 Sign In
               </Button>
+          
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-  <div style={{ flex: 1, height: '1px', backgroundColor: 'black',marginRight: '10px' }}></div>
-  <Typography component="h1" variant="h5">     
-        Or
-  </Typography>
-  <div style={{ flex: 1, height: '1px', backgroundColor: 'black', marginLeft: '10px' }}></div>
-</div>
-
-   <SignInWithGoogle></SignInWithGoogle>
-
-
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                <Link to="/signup" variant="body2">
-  {"Don't have an account? Sign Up"}
-</Link>
-   
-                </Grid>
-              </Grid>
-              <Copyright sx={{ mt: 5 }} />
-            </Box>
+                <div style={{ flex: 1, height: '1px', backgroundColor: 'black', marginRight: '10px' }}></div>
+                <Typography component="h1" variant="h5">
+                  Or
+                </Typography>
+                <div style={{ flex: 1, height: '1px', backgroundColor: 'black', marginLeft: '10px' }}></div>
+              </div>
+              <SignInWithGoogle />
+            
+            </form>
           </Box>
         </Grid>
       </Grid>
